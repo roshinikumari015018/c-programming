@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    char item[50];
+    float price, quantity, total = 0, amount;
+
+    printf("------ Billing System ------\n");
+    printf("Enter number of items: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++) {
+        printf("\nItem %d name: ", i);
+        scanf("%s", item);
+
+        printf("Enter price: ");
+        scanf("%f", &price);
+
+        printf("Enter quantity: ");
+        scanf("%f", &quantity);
+
+        amount = price * quantity;
+        total = total + amount;
+
+        printf("Amount for %s = %.2f\n", item, amount);
+    }
+
+    printf("\n------- RECEIPT -------\n");
+    printf("Total Bill = %.2f\n", total);
+    printf("-----------------------\n");
+    printf("Thank you for shopping!\n");
+
+    return 0;
+}
